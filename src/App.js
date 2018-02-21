@@ -16,6 +16,9 @@ class App extends Component {
           />
           <h1 className="App-title">Responsive demo using react-media</h1>
         </header>
+        <p className="App-sub">
+          Resize the browser to see react-media in action
+        </p>
         <div>
           <Media
             query="(min-width: 800px)"
