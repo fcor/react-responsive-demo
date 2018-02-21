@@ -1,0 +1,22 @@
+{
+  "name": "react-js-responsive-website",
+  "version": "1.0.0",
+  "description":
+    "Responsive website template built on react.js and react-media",
+  "keywords": ["responsive", "react"],
+  "homepage": "https://codesandbox.io/s/new",
+  "main": "src/index.js",
+  "dependencies": {
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "react-media": "1.8.0",
+    "react-scripts": "1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
