@@ -23,27 +23,34 @@ class App extends Component {
           <Media
             query="(min-width: 800px)"
             render={() => (
-              <p className="App-intro">The document is at least 800px wide.</p>
-            )}
-          />
-          <Media
-            query="(min-width: 600px) and (max-width: 799px)"
-            render={() => (
               <p className="App-intro">
-                The document is between 600px and 799px wide.
+                The document is at least 800px wide. <br /> <br /> This is
+                rendered using render props
               </p>
             )}
           />
-          <Media
-            query="(max-width: 599px)"
-            render={() => (
-              <p className="App-intro">The document is less than 600px wide.</p>
-            )}
-          />
+          <Media query="(min-width: 600px) and (max-width: 799px)">
+            {matches =>
+              matches ? (
+                <p className="App-intro">
+                  The document is between 600px and 799px wide.
+                  <br /> <br /> This is rendered using children props
+                </p>
+              ) : null
+            }
+          </Media>
+          <Media query="(max-width: 599px)" render={() => <Mobile />} />
         </div>
       </div>
     );
   }
 }
+
+const Mobile = () => (
+  <p className="App-intro">
+    The document is less than 600px wide.
+    <br /> <br /> This is rendered passing a component via render props
+  </p>
+);
 
 export default App;
